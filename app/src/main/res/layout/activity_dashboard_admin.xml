@@ -5,6 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".DashboardAdminActivity">
+
+    <!--Toolbar-->
     <RelativeLayout
         android:id="@+id/toolbarRl"
         android:layout_width="match_parent"
@@ -17,9 +19,9 @@
             android:layout_centerHorizontal="true"
             android:textStyle="bold"
             android:layout_marginTop="10dp"
-
             android:text="Admin Dashboard"
             android:textColor="@color/white"/>
+
         <TextView
             android:id="@+id/subTitleTv"
             android:layout_width="wrap_content"
@@ -28,6 +30,7 @@
             android:layout_centerHorizontal="true"
             android:text="abc@gmail.com"
             android:textColor="@color/white"/>
+
         <ImageButton
             android:id="@+id/logoutBtn"
             android:layout_width="wrap_content"
@@ -37,14 +40,14 @@
             android:layout_marginEnd="15dp"
             android:src="@drawable/ic_logout_gray"
             android:background="@android:color/transparent"/>
-
+        <!--Toolbar-->
     </RelativeLayout>
     <!--Search-->
     <EditText
         android:id="@+id/searchEt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/toolbarRl"
+        android:layout_below="@id/toolbarRl"    
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
@@ -56,14 +59,18 @@
 
     <!--Categories-->
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@id/categoriesRv"
+        android:id="@+id/categoryRv"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/searchEt"
         android:layout_above="@id/bottomLl"
-        android:layout_margin="5dp"
-        tools:listitem="@layout/row_category"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+        android:layout_below="@id/searchEt"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/row_category" />
+
     <LinearLayout
         android:id="@+id/bottomLl"
         android:layout_width="match_parent"
@@ -84,6 +91,7 @@
             android:textColor="@color/white"
             android:minHeight="50dp"
             android:textAllCaps="false"/>
+
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/addPdfab"
             android:layout_width="wrap_content"
@@ -93,4 +101,5 @@
             app:fabCustomSize="50dp"
             android:backgroundTint="@color/purple_500"/>
     </LinearLayout>
+
 </RelativeLayout>
