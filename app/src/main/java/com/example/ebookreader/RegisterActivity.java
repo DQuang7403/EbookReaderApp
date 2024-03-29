@@ -33,10 +33,6 @@ public class RegisterActivity extends AppCompatActivity {
     AlertDialog.Builder builder = new AlertDialog.Builder(RegisterActivity.this);
     AlertDialog dialog = builder.create();
 
-
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

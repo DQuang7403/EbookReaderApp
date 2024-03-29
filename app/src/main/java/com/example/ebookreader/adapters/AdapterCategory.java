@@ -76,8 +76,6 @@ public class AdapterCategory extends RecyclerView.Adapter<AdapterCategory.Holder
                                 //begin delete
                                 Toast.makeText(context, "Deleting...", Toast.LENGTH_SHORT).show();
                                 deleteCategory(model, holder);
-
-
                             }
                         })
                         .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
@@ -94,9 +92,9 @@ public class AdapterCategory extends RecyclerView.Adapter<AdapterCategory.Holder
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(context, PdfListAdminActivity.class);
-                intent.putExtra ("categoryID",id);
-                intent.putExtra("categoryTitle",category);
-                context.startActivities(intent);
+                intent.putExtra ("categoryID", id);
+                intent.putExtra("categoryTitle", category);
+                context.startActivity(intent);
             }
         });
     }

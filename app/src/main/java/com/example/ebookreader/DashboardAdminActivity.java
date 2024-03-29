@@ -38,7 +38,7 @@ public class DashboardAdminActivity extends AppCompatActivity {
         checkUser();
         loadCategories();
 
-        //edit text change listern, search
+        //edit text change listen, search
         binding.searchEt.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {

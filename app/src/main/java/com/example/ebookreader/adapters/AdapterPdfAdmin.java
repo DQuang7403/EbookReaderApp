@@ -24,6 +24,10 @@ import com.example.ebookreader.MyApplication;
 import com.example.ebookreader.databinding.RowPdfAdminBinding;
 import com.example.ebookreader.filters.FilterPdfAdmin;
 import com.example.ebookreader.models.ModelPdf;
+import com.github.barteksc.pdfviewer.PDFView;
+import com.github.barteksc.pdfviewer.listener.OnErrorListener;
+import com.github.barteksc.pdfviewer.listener.OnLoadCompleteListener;
+import com.github.barteksc.pdfviewer.listener.OnPageErrorListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.DataSnapshot;
@@ -126,11 +130,11 @@ public class AdapterPdfAdmin extends RecyclerView.Adapter<AdapterPdfAdmin.Holder
                         Log.d(TAG, "onSuccess:"+model.getTitle()+"successfully got the file ");
                         //set to pdfview
                         holder.pdfView.fromBytes(bytes)
-                                .page(0)
+                                .pages(0)
                                 .spacing(0)
                                 .swipeHorizontal(false)
                                 .enableSwipe(false)
-                                .onError(new MediaSync.OnErrorListener() {
+                                .onError(new OnErrorListener() {
                                     @Override
                                     public void onError(Throwable t){
                                         holder.progressBar.setVisibility(View.INVISIBLE);
@@ -144,9 +148,9 @@ public class AdapterPdfAdmin extends RecyclerView.Adapter<AdapterPdfAdmin.Holder
                                         Log.d(TAG, "onError: "+t.getMessage());
                                     }
                                 })
-                                .onLoaf(new OnLoadCompleteListener(){
+                                .onLoad(new OnLoadCompleteListener() {
                                     @Override
-                                    public void loadCompleteListener(int nbPages) {
+                                    public void loadComplete(int nbPages) {
                                         holder.progressBar.setVisibility(View.INVISIBLE);
                                         Log.d(TAG, "loadCompleteListener: pdf loaded");
                                     }
@@ -163,13 +167,13 @@ public class AdapterPdfAdmin extends RecyclerView.Adapter<AdapterPdfAdmin.Holder
     }
 
     private void loadCategory(ModelPdf model, HolderPdfAdmin holder) {
-        String categoryId=model.getCategoryID();
-        DatabaseReference ref = FirebaseDatabase.getInstance().getReference("Categpries");
+        String categoryId = model.getCategoryID();
+        DatabaseReference ref = FirebaseDatabase.getInstance().getReference("Categories");
         ref.child(categoryId)
                 .addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
-                        String category=snapshot.child("category").getValue();
+                        String category= snapshot.child("category").getValue().toString();
                         holder.categoryTv.setText(category);
                     }
 

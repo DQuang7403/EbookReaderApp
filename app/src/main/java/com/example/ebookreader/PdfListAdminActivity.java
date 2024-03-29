@@ -5,12 +5,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
 
 import com.example.ebookreader.adapters.AdapterPdfAdmin;
 import com.example.ebookreader.databinding.ActivityPdfAddBinding;
+import com.example.ebookreader.databinding.ActivityPdfListAdminBinding;
 import com.example.ebookreader.models.ModelPdf;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -24,7 +26,7 @@ import java.util.ArrayList;
 
 public class PdfListAdminActivity extends AppCompatActivity {
 
-    private ActivityPdfAddBinding binding;
+    private ActivityPdfListAdminBinding binding;
     private ArrayList<ModelPdf> pdfArrayList;
     private AdapterPdfAdmin adapterPdfAdmin;
     private String categoryId, categoryTitle;
@@ -34,8 +36,8 @@ public class PdfListAdminActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = ActivityPdfAddBinding.inflate(getLayoutInflater());
-        setContentView(binding.getRoot());
+        binding = ActivityPdfListAdminBinding.inflate(getLayoutInflater());
+            setContentView(binding.getRoot());
 
         //get Data from intent
         Intent intent = getIntent();
@@ -45,14 +47,14 @@ public class PdfListAdminActivity extends AppCompatActivity {
         binding.subTitleTv.setText(categoryTitle);
 
         loadPdfList();
-        binding.searchEt.addTextChangedListener(new TextWatcher(){
+        binding.searchEt.addTextChangedListener(new TextWatcher() {
             @Override
-            public void beforeTextChanged(CharSequence s,int start,int count, int after){
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
             }
 
             @Override
-            public void onTextChanged (CharSequence s ,int start, int before, int count){
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
                 try {
                     adapterPdfAdmin.getFilter().filter(s);
                 }
@@ -61,12 +63,17 @@ public class PdfListAdminActivity extends AppCompatActivity {
 
                 }
             }
-        })
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
 
         binding.backBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                onBackPressed();
+                getOnBackPressedDispatcher().onBackPressed();
             }
         });
     }
@@ -92,6 +99,6 @@ public class PdfListAdminActivity extends AppCompatActivity {
                     public void onCancelled(@NonNull DatabaseError error) {
 
                     }
-                })
+                });
     }
 }

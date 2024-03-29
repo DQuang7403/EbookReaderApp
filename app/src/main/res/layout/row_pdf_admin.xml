@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="140dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -23,8 +24,8 @@
 
             <!--Pdf View-->
             <com.github.barteksc.pdfviewer.PDFView
-                android:id="@+id/pdfRl"
-                android:layout_width= "match_parent"
+                android:id="@+id/pdfView"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"/>
 
             <!--Progress Bar-->
