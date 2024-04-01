@@ -41,9 +41,8 @@ public class PdfListAdminActivity extends AppCompatActivity {
 
         //get Data from intent
         Intent intent = getIntent();
-        categoryId = intent.getStringExtra("categoryId");
+        categoryId = intent.getStringExtra("categoryID");
         categoryTitle = intent.getStringExtra("categoryTitle");
-
         binding.subTitleTv.setText(categoryTitle);
 
         loadPdfList();
@@ -80,7 +79,7 @@ public class PdfListAdminActivity extends AppCompatActivity {
     private void loadPdfList(){
         pdfArrayList = new ArrayList<>();
         DatabaseReference ref = FirebaseDatabase.getInstance().getReference("Books");
-        ref.orderByChild("categoryId").equalTo(categoryId)
+        ref.orderByChild("categoryID").equalTo(categoryId)
                 .addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
