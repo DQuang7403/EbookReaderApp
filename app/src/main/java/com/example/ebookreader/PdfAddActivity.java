@@ -167,7 +167,7 @@ public class PdfAddActivity extends AppCompatActivity {
         Toast.makeText(this, "Uploading Pdf info to firebase db...", Toast.LENGTH_SHORT).show();
         String uid = firebaseAuth.getUid();
 
-        //setup data to upload
+        //setup data to upload,
         HashMap<String, Object> hashMap = new HashMap<>();
         hashMap.put("uid",""+uid);
         hashMap.put("id",""+timestamp);
@@ -176,6 +176,8 @@ public class PdfAddActivity extends AppCompatActivity {
         hashMap.put("categoryID",""+selectedcategoryId);
         hashMap.put("url",""+uploadedPdfUrl);
         hashMap.put("timestamp", timestamp);
+        hashMap.put("viewCount", 0);
+        hashMap.put("downloadCount", 0);
 
         //db refrence: DB > Books
         DatabaseReference ref = FirebaseDatabase.getInstance().getReference("Books");
