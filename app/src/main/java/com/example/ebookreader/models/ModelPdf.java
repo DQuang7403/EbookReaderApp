@@ -3,13 +3,13 @@ package com.example.ebookreader.models;
 public class ModelPdf {
     //variables
     String uid, id, title, description, categoryID, url;
-    long timestamp;
+    long timestamp, viewCount, downloadsCount;
     //constructor
     public ModelPdf() {
     }
-    //contructor with all params
+    //constructor with all params
 
-    public ModelPdf(String uid, String id, String title, String description, String categoryID, String url, long timestamp) {
+    public ModelPdf(String uid, String id, String title, String description, String categoryID, String url, long timestamp, long viewCount, long downloadsCount) {
         this.uid = uid;
         this.id = id;
         this.title = title;
@@ -17,7 +17,11 @@ public class ModelPdf {
         this.categoryID = categoryID;
         this.url = url;
         this.timestamp = timestamp;
+        this.viewCount = viewCount;
+        this.downloadsCount = downloadsCount;
     }
+
+
 
 
 
@@ -77,5 +81,21 @@ public class ModelPdf {
 
     public void setTimestamp(long timestamp) {
         this.timestamp = timestamp;
+    }
+
+    public long getViewCount() {
+        return viewCount;
+    }
+
+    public void setViewCount(long viewCount) {
+        this.viewCount = viewCount;
+    }
+
+    public long getDownloadsCount() {
+        return downloadsCount;
+    }
+
+    public void setDownloadsCount(long downloadsCount) {
+        this.downloadsCount = downloadsCount;
     }
 }
