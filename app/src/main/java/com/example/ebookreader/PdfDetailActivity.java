@@ -50,9 +50,9 @@ public class PdfDetailActivity extends AppCompatActivity {
         binding.readBookBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent1 = new Intent(PdfDetailActivity.this, PdfDetailActivity.class);
-                intent1.putExtra( "bookId", bookId);
-                startActivity(intent);
+                Intent intent1 = new Intent(PdfDetailActivity.this, PdfViewActivity.class);
+                intent1.putExtra("bookId", bookId);
+                startActivity(intent1);
             }
         });
     }
@@ -66,7 +66,7 @@ public class PdfDetailActivity extends AppCompatActivity {
                         //get data
                         String title=""+snapshot.child("title").getValue();
                         String description = ""+snapshot.child("description").getValue();
-                        String categoryId = ""+snapshot.child("categoryId").getValue();
+                        String categoryId = ""+snapshot.child("categoryID").getValue();
                         String viewsCount = ""+snapshot.child("viewsCount").getValue();
                         String downloadsCount = ""+snapshot.child("downloadsCount").getValue();
                         String url = ""+snapshot.child("url").getValue();
@@ -110,37 +110,4 @@ public class PdfDetailActivity extends AppCompatActivity {
                 });
     }
 
-    public static void incrementBookViewCount(){
-        //1) Get book views count
-        DatabaseReference ref = FirebaseDatabase.getInstance().getReference ( "Books");
-        ref.child(bookId)
-                .addListenerForSingleValueEvent(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(@NonNull DataSnapshot snapshot) {
-                        //get views count
-                        String viewsCount = ""+snapshot.child("viewsCount").getValue();
-
-                        //in case of null replace with @
-                        if (viewsCount.equals("") || viewsCount.equals("null")){
-                            viewsCount = "0";
-                        }
-
-                        //2) Increment views count
-                        long newViewsCount = Long.parseLong (viewsCount) + 1;
-                        HashMap<String, Object> hashMap = new HashMap<>();
-                        hashMap.put("viewsCount", newViewsCount);
-
-                        DatabaseReference reference = FirebaseDatabase.getInstance().getReference ( "Books");
-                        reference.child(bookId)
-                                .updateChildren(hashMap);
-                    }
-
-
-                    @Override
-                    public void onCancelled(@NonNull DatabaseError error) {
-
-                    }
-                });
-
-    }
 }

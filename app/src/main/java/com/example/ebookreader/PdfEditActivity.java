@@ -80,7 +80,7 @@ public class PdfEditActivity extends AppCompatActivity {
                 .addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
-                        selectedCategoryId = ""+snapshot.child("categoryId").getValue();
+                        selectedCategoryId = ""+snapshot.child("categoryID").getValue();
                         String description = ""+snapshot.child("description").getValue();
                         String title = ""+snapshot.child("title").getValue();
                         //set to views
@@ -153,6 +153,7 @@ public class PdfEditActivity extends AppCompatActivity {
                     public void onSuccess(Void unused) {
                         Log.d(TAG, "onSuccess: Book updated...");
                         Toast.makeText(PdfEditActivity.this,"Book info updated...", Toast.LENGTH_SHORT).show();
+                        getOnBackPressedDispatcher().onBackPressed();
                     }
                 })
                 .addOnFailureListener(new OnFailureListener() {
@@ -175,7 +176,7 @@ public class PdfEditActivity extends AppCompatActivity {
 
         //Alert Dialog
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("Chooose category")
+        builder.setTitle("Choose category")
                 .setItems(categoriesArray, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {

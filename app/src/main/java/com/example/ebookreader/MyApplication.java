@@ -33,6 +33,7 @@ import com.google.firebase.storage.StorageMetadata;
 import com.google.firebase.storage.StorageReference;
 
 import java.util.Calendar;
+import java.util.HashMap;
 import java.util.Locale;
 
 public class MyApplication extends Application {
@@ -188,7 +189,7 @@ public class MyApplication extends Application {
                 .addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
-                        String category= snapshot.child("category").getValue().toString();
+                        String category = "" + snapshot.child("category").getValue();
                         categoryTv.setText(category);
                     }
 
@@ -199,4 +200,26 @@ public class MyApplication extends Application {
                 });
     }
 
+    public static void incrementBookViewCount(String bookId){
+        DatabaseReference ref = FirebaseDatabase.getInstance().getReference("Books");
+        ref.child(bookId).addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                String viewsCount = ""+ snapshot.child("viewsCount").getValue();
+                if (viewsCount == "" || viewsCount.equals("null")){
+                    viewsCount = "0";
+                }
+                long newViewsCount = Long.parseLong(viewsCount) + 1;
+                HashMap<String, Object> hashMap = new HashMap<>();
+                hashMap.put("viewsCount", newViewsCount);
+                DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Books");
+                reference.child(bookId).updateChildren(hashMap);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+    }
 }

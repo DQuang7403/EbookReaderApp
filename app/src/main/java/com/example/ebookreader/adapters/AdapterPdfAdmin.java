@@ -114,7 +114,6 @@ public class AdapterPdfAdmin extends RecyclerView.Adapter<AdapterPdfAdmin.Holder
         holder.moreBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 noreOptiosnDialog(model, holder);
             }
         });
@@ -124,7 +123,7 @@ public class AdapterPdfAdmin extends RecyclerView.Adapter<AdapterPdfAdmin.Holder
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(context, PdfDetailActivity.class);
-                intent.putExtra("boolId", pdfId);
+                intent.putExtra("bookId", pdfId);
                 context.startActivity(intent);
             }
         });
@@ -149,7 +148,7 @@ public class AdapterPdfAdmin extends RecyclerView.Adapter<AdapterPdfAdmin.Holder
                         if (which == 0) {
                             //Edit clicked, open PdfEditActivity to edit the book info
                             Intent intent = new Intent(context, PdfEditActivity.class);
-                            intent.putExtra("bookid", bookId);
+                            intent.putExtra("bookId", bookId);
                             context.startActivity(intent);
 
                         } else if (which == 1) {

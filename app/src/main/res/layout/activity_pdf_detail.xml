@@ -55,6 +55,7 @@
 
                 <!--Book preview-->
                 <RelativeLayout
+                    android:id="@+id/pdfRL"
                     android:layout_width="100dp"
                     android:layout_height="140dp"
                     android:layout_marginEnd="5dp"
@@ -81,7 +82,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_toEndOf="@id/pdfRL"
-                    android:text="Title of Book" />
+                    android:text="Title of Book"
+                    tools:ignore="UnknownId" />
 
                 <!--Table-->
                 <TableLayout
