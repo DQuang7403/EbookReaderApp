@@ -89,7 +89,7 @@ public class PdfDetailActivity extends AppCompatActivity {
     }
 
 
-    //request storage permisson
+    //request storage permission
     private ActivityResultLauncher<String> requestPermissionLauncher =
             registerForActivityResult(new ActivityResultContracts.RequestPermission(), isGranted -> {
                if (isGranted){
@@ -118,7 +118,7 @@ public class PdfDetailActivity extends AppCompatActivity {
                         String timestamp = ""+snapshot.child("timestamp").getValue();
 
                         //required data is loaded, show download button
-                        binding.downloadBookBtn.setVisibility(View.INVISIBLE);
+                        binding.downloadBookBtn.setVisibility(View.VISIBLE);
 
                         //format date
                         String date = MyApplication.formatTimestamp (Long.parseLong(timestamp));

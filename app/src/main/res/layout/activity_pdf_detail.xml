@@ -225,6 +225,7 @@
         android:layout_alignParentBottom="true">
 
         <!--Button: Open to view pdf-->
+
         <Button
             android:id="@+id/readBookBtn"
             android:layout_width="match_parent"
