@@ -67,6 +67,7 @@ public class CategoryAddActivity extends AppCompatActivity {
                     @Override
                     public void onSuccess(Void unused) {
                         Toast.makeText(CategoryAddActivity.this, "Category added successfully", Toast.LENGTH_SHORT).show();
+                        getOnBackPressedDispatcher().onBackPressed();
                     }
                 }).addOnFailureListener(new OnFailureListener() {
                     @Override

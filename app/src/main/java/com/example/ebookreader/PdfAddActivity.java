@@ -188,7 +188,7 @@ public class PdfAddActivity extends AppCompatActivity {
                     public void onSuccess(Void unused) {
                         Log.d(TAG, "onSuccess: Successfully uploaded...");
                         Toast.makeText(PdfAddActivity.this, "Successfully uploaded...", Toast.LENGTH_SHORT).show();
-
+                        getOnBackPressedDispatcher().onBackPressed();
                     }
                 })
                 .addOnFailureListener(new OnFailureListener() {
@@ -202,6 +202,7 @@ public class PdfAddActivity extends AppCompatActivity {
 
     private void loadPdfCategories() {
         Log.d(TAG, "loadPdfCategories: Loading pdf categories...");
+        Toast.makeText(PdfAddActivity.this, "loadPdfCategories: Loading pdf categories...", Toast.LENGTH_SHORT).show();
         categoryTitleArrayList = new ArrayList<>();
         categoryIdArrayList = new ArrayList<>();
 
@@ -230,7 +231,6 @@ public class PdfAddActivity extends AppCompatActivity {
     private String selectedcategoryId, selectedcategoryTitle;
     private void categoryPickDialog() {
         Log.d(TAG, "categoryPickDialog: showing category pick dialog");
-
         //get string array of categories from arraylist
         String[] categoriesArray = new String[categoryTitleArrayList.size()];
         for (int i=0; i<categoryTitleArrayList.size();i++){

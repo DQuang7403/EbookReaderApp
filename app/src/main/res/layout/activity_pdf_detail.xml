@@ -255,7 +255,7 @@
             android:drawableTop="@drawable/ic_book_white"
             android:text="Read"
             android:textColor="@color/white"
-            android:background="@color/design_default_color_primary"/>
+            android:background="@color/purple_200"/>
 
         <!--Button: download pdf-->
         <Button
@@ -266,7 +266,7 @@
             android:drawableTop="@drawable/ic_download_white"
             android:text="Download"
             android:textColor="@color/white"
-            android:background="@color/design_default_color_primary"/>
+            android:background="@color/purple_200"/>
 
         <Button
             android:id="@+id/favoriteBtn"
@@ -275,7 +275,7 @@
             android:layout_weight="1"
             android:drawableTop="@drawable/ic_favorite_border_white"
             android:text="Add Favorite"
-            android:background="@color/design_default_color_primary"
+            android:background="@color/purple_200"
             android:textColor="@color/white"/>
 
     </LinearLayout>

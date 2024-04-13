@@ -236,13 +236,13 @@ public class MyApplication extends Application {
     public static void downloadBook(Context context, String bookId, String bookTitle, String bookUrl){
         Log.d(TAG_DOWNLOAD, "downloadBook: downloading book...");
 
-        String nameWithExtention = bookTitle + ".pdf";
-        Log.d(TAG_DOWNLOAD, "downloadBook: NAME: "+nameWithExtention);
+        String nameWithExtension = bookTitle + ".pdf";
+        Log.d(TAG_DOWNLOAD, "downloadBook: NAME: "+nameWithExtension);
 
         //progress dialog
-        ProgressDialog progressDialog = new ProgressDialog(context);
-        progressDialog.setMessage("Downloading "+ nameWithExtention +"..."); //e.g. Downloading ABC_Book.pdf
-        progressDialog.show();
+//        ProgressDialog progressDialog = new ProgressDialog(context);
+//        progressDialog.setMessage("Downloading "+ nameWithExtension +"..."); //e.g. Downloading ABC_Book.pdf
+//        progressDialog.show();
 
         //download from firebase storage using url
         StorageReference storageReference = FirebaseStorage.getInstance().getReferenceFromUrl(bookUrl);
@@ -251,26 +251,26 @@ public class MyApplication extends Application {
                     @Override
                     public void onSuccess(byte[] bytes) {
                         Log.d(TAG_DOWNLOAD, "onSuccess: Book Downloaded");
-                        saveDownloadedBook(context, progressDialog, bytes, nameWithExtention, bookId);
+                        saveDownloadedBook(context, bytes, nameWithExtension, bookId);
                     }
                 })
                 .addOnFailureListener(new OnFailureListener() {
                     @Override
                     public void onFailure(@NonNull Exception e) {
                         Log.d(TAG_DOWNLOAD, "onFailure: Failure to download due to" +e.getMessage());
-                        progressDialog.dismiss();
+
                         Toast.makeText(context, "Failed to download due to" +e.getMessage(), Toast.LENGTH_SHORT).show();
                     }
                 });
     }
 
-    private static void saveDownloadedBook(Context context, ProgressDialog progressDialog, byte[] bytes, String nameWithExtention, String bookId) {
+    private static void saveDownloadedBook(Context context,  byte[] bytes, String nameWithExtension, String bookId) {
         Log.d(TAG_DOWNLOAD, "saveDownloadedBook: Saving Downloaded book");
         try {
             File downloadsFolder = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS);
             downloadsFolder.mkdirs();
 
-            String filePath = downloadsFolder.getPath() + "/" + nameWithExtention;
+            String filePath = downloadsFolder.getPath() + "/" + nameWithExtension;
 
             FileOutputStream out = new FileOutputStream(filePath);
             out.write(bytes);
@@ -278,20 +278,20 @@ public class MyApplication extends Application {
 
             Toast.makeText(context, "Saved to Download Folder", Toast.LENGTH_SHORT).show();
             Log.d(TAG_DOWNLOAD, "saveDownloadedBook: Saved to Download Folder");
-            progressDialog.dismiss();
+
 
             incrementBookDownloadCount(bookId);
         }
         catch (Exception e){
             Log.d(TAG_DOWNLOAD, "saveDownloadedBook: Failed saving to Download Folder due to " +e.getMessage());
             Toast.makeText(context, "Failed saving to Download Folder due to \" +e.getMessage()", Toast.LENGTH_SHORT).show();
-            progressDialog.dismiss();
+
 
         }
     }
 
     private static void incrementBookDownloadCount(String bookId) {
-        Log.d(TAG_DOWNLOAD, "incrementBookDownloadCount: Incerementing Book Download Count");
+        Log.d(TAG_DOWNLOAD, "incrementBookDownloadCount: Incrementing Book Download Count");
 
         //Step 1: Get previous download count
 
