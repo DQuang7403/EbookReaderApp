@@ -19,7 +19,7 @@
             android:layout_centerHorizontal="true"
             android:textStyle="bold"
             android:layout_marginTop="10dp"
-            android:text="User Dashboard"
+            android:text="@string/user_dashboard"
             android:textColor="@color/white"/>
 
         <TextView
@@ -49,13 +49,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/toolbarRl"
-        android:layout_margin="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
         android:background="@android:color/transparent"
         app:tabBackground="@drawable/tab_selector"
         app:tabIndicatorFullWidth="false"
         app:tabIndicatorHeight="8dp"
         app:tabMode="scrollable"
-        app:tabUnboundedRipple="false"/>
+        app:tabUnboundedRipple="false" />
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/viewPager"

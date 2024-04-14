@@ -19,7 +19,7 @@
             android:layout_centerHorizontal="true"
             android:textStyle="bold"
             android:layout_marginTop="10dp"
-            android:text="Admin Dashboard"
+            android:text="@string/admin_dashboard"
             android:textColor="@color/white"/>
 
         <TextView
@@ -53,7 +53,7 @@
         android:layout_marginEnd="10dp"
         android:background="@color/white"
         android:drawableStart="@drawable/ic_search_gray"
-        android:hint="Search"
+        android:hint="@string/search_placeholder"
         android:padding="10dp"
         android:textColorHint="@color/gray01"/>
 
@@ -84,7 +84,7 @@
             android:id="@+id/addCategoryBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="+ Add New Category"
+            android:text="@string/add_category_btn"
             android:layout_weight="1"
             android:layout_marginEnd="10dp"
             android:background="@drawable/shape_button01"

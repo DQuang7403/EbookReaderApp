@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Ebook Reader</string>
+    <string name="new_user_sign_up">Bạn không có tài khoản? <b>Đăng kí</b></string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Fragment trống</string>
+    <string name="login">Đăng nhập</string>
+    <string name="noLogin">Tiếp tục mà không đăng nhập</string>
+    <string name="categoryTitle">Thêm một danh mục mới</string>
+    <string name="submit">Submit</string>
+    <string name="category_title">Tiêu đề danh mục</string>
+    <string name="admin_dashboard">Trang điều khiển của quản trị viên</string>
+    <string name="add_category_btn">+ Thêm danh mục mới</string>
+    <string name="user_dashboard">Trang điều khiển của người dùng</string>
+    <string name="forgot_Pwd">Quên mật khẩu?</string>
+    <string name="add_new_book">Thêm sách mới</string>
+    <string name="title_placeholder">Tiều đề của sách</string>
+    <string name="desc_placeholder">Mô tả của sách</string>
+    <string name="category_placeholder">Danh mục của sách</string>
+    <string name="upload_btn">Tải lên</string>
+    <string name="read_btn">Đọc sách</string>
+    <string name="download_btn">Tải về</string>
+    <string name="fav_btn">Yêu thích</string>
+    <string name="update_btn">Cập nhật</string>
+    <string name="edit_book_info">Chỉnh sửa thông tin sách</string>
+    <string name="books">Sách</string>
+    <string name="search_placeholder">Tìm kiếm</string>
+    <string name="read_book">Đọc sách</string>
+    <string name="create_account">Tạo tài khoản mới</string>
+    <string name="username_placeholder">Tên người dùng</string>
+    <string name="email_placeholder">Email</string>
+    <string name="password_placeholder">Mật khẩu</string>
+    <string name="confirm_pwd_placeholder">Xác nhận mật khẩu</string>
+    <string name="create_btn">Tạo</string>
+    <string name="book_details">Chi tiết sách</string>
+    <string name="book_details_category">Danh mục</string>
+    <string name="book_details_date">Ngày</string>
+    <string name="book_details_size">Kích cỡ</string>
+    <string name="book_details_views">Lượt xem</string>
+    <string name="book_details_download">Lượt tải về</string>
+    <string name="book_details_pages">Số trang</string>
+</resources>

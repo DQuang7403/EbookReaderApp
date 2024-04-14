@@ -142,7 +142,7 @@ public class DashboardUserActivity extends AppCompatActivity {
     private void checkUser() {
         FirebaseUser firebaseUser = firebaseAuth.getCurrentUser();
         if (firebaseUser == null){
-            binding.subTitleTv.setText("Not Logged In");
+            binding.subTitleTv.setText("anonymous user");
 
         }else {
             String email = firebaseUser.getEmail();

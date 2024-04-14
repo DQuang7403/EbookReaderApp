@@ -4,42 +4,94 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="20dp"
     android:background="@drawable/back01"
+    android:padding="20dp"
     tools:context=".MainActivity">
-        <ImageView
-            android:id="@+id/iconIv"
-            android:src="@drawable/logo"
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="40dp" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/iconIv"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="20dp"
-            android:text="Ebook Reader"
-            android:textColor="@color/black"
-            android:textSize="30sp"/>
 
-        <Button
-            android:id="@+id/loginBtn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_above="@id/skipBtn"
-            android:layout_marginBottom="10dp"
-            android:text="Login"
-            android:background="@drawable/shape_button01"
-            android:textColor="@color/white"/>
+    <ImageView
+        android:id="@+id/iconIv"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/logo" />
 
-        <Button
-            android:id="@+id/skipBtn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:text="Continue Without Login"
-            android:background="@drawable/shape_button02"
-            android:textColor="@color/purple_500"/>
+    <TextView
+        android:id="@+id/app_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iconIv"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Ebook Reader"
+        android:textColor="@color/black"
+        android:textSize="30sp" />
+
+    <LinearLayout
+        android:id="@+id/buttonGroupLinearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/loginBtn"
+        android:layout_centerInParent="true"
+        android:gravity="center_horizontal|center_vertical"
+        android:orientation="horizontal"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp">
+
+        <ImageButton
+            android:id="@+id/en_lang_btn"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:background="@drawable/united_kingdom_logo"
+            android:scaleType="centerInside" />
+
+        <ImageButton
+            android:id="@+id/vi_lang_btn"
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:background="@drawable/vietnam_logo"
+            android:scaleType="centerInside" />
+
+
+        <ImageButton
+            android:id="@+id/fr_lang_btn"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:background="@drawable/france_logo"
+            android:scaleType="centerInside" />
+    </LinearLayout>
+<!--    <Spinner-->
+<!--        android:id="@+id/spinner"-->
+<!--        android:layout_width="250dp"-->
+<!--        android:layout_height="50dp"-->
+<!--        android:layout_above="@id/loginBtn"-->
+<!--        android:layout_centerInParent="true"-->
+<!--        android:layout_marginBottom="40dp"/>-->
+
+    <Button
+        android:id="@+id/loginBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/skipBtn"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/shape_button01"
+        android:text="@string/login"
+        android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/skipBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/shape_button02"
+        android:text="@string/noLogin"
+        android:textColor="@color/purple_500" />
 </RelativeLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Lecteur de livres électroniques</string>
+    <string name="new_user_sign_up">Vous n\'avez pas de compte ? <b>Inscrivez-vous</b></string>
+    <string name="hello_blank_fragment">Fragment vide</string>
+    <string name="login">Connexion</string>
+    <string name="noLogin">Continuer sans connexion</string>
+    <string name="categoryTitle">Ajouter une nouvelle catégorie</string>
+    <string name="submit">Soumettre</string>
+    <string name="category_title">Titre de la catégorie</string>
+    <string name="admin_dashboard">Tableau de bord de l\'administrateur</string>
+    <string name="add_category_btn">+ Ajouter une nouvelle catégorie</string>
+    <string name="user_dashboard">Tableau de bord de l\'utilisateur</string>
+    <string name="forgot_Pwd">Mot de passe oublié ?</string>
+    <string name="add_new_book">Ajouter un nouveau livre</string>
+    <string name="title_placeholder">Titre du livre</string>
+    <string name="desc_placeholder">Description du livre</string>
+    <string name="category_placeholder">Catégorie du livre</string>
+    <string name="upload_btn">Télécharger</string>
+    <string name="read_btn">Lire</string>
+    <string name="download_btn">Télécharger</string>
+    <string name="fav_btn">Favoris</string>
+    <string name="update_btn">Mettre à jour</string>
+    <string name="edit_book_info">Modifier les informations du livre</string>
+    <string name="books">Livres</string>
+    <string name="search_placeholder">Rechercher</string>
+    <string name="read_book">Lire le livre</string>
+    <string name="create_account">Créer un compte</string>
+    <string name="username_placeholder">Nom d\'utilisateur</string>
+    <string name="email_placeholder">E-mail</string>
+    <string name="password_placeholder">Mot de passe</string>
+    <string name="confirm_pwd_placeholder">Confirmer le mot de passe</string>
+    <string name="create_btn">Créer</string>
+    <string name="book_details">Détails du livre</string>
+    <string name="book_details_category">Catégorie</string>
+    <string name="book_details_date">Date</string>
+    <string name="book_details_size">Taille</string>
+    <string name="book_details_views">Vues</string>
+    <string name="book_details_download">Téléchargements</string>
+    <string name="book_details_pages">Pages</string>
+
+</resources>

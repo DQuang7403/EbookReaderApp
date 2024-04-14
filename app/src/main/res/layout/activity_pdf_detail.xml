@@ -29,9 +29,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:text="Book Details"
+            android:text="@string/book_details"
             android:textColor="@color/white"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
 
     </RelativeLayout>
 
@@ -100,7 +100,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginEnd="5dp"
-                            android:text="Category"/>
+                            android:text="@string/book_details_category"/>
 
                         <TextView
                             android:id="@+id/categoryTv"
@@ -122,7 +122,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginEnd="5dp"
-                            android:text="Date"/>
+                            android:text="@string/book_details_date"/>
                         <TextView
                             android:id="@+id/dateTv"
                             style="@style/TextAppearance.MaterialComponents.Caption"
@@ -144,7 +144,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginEnd="5dp"
-                            android:text="Size"/>
+                            android:text="@string/book_details_size"/>
                         <TextView
                             android:id="@+id/sizeTv"
                             style="@style/TextAppearance.MaterialComponents.Caption"
@@ -165,7 +165,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginEnd="5dp"
-                            android:text="Views"/>
+                            android:text="@string/book_details_views"/>
                         <TextView
                             android:id="@+id/viewsTv"
                             style="@style/TextAppearance.MaterialComponents.Caption"
@@ -186,7 +186,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginEnd="5dp"
-                            android:text="Downloads"/>
+                            android:text="@string/book_details_download"/>
                         <TextView
                             android:id="@+id/downloadsTv"
                             style="@style/TextAppearance.MaterialComponents.Caption"
@@ -206,7 +206,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginEnd="5dp"
-                            android:text="Pages"/>
+                            android:text="@string/book_details_pages"/>
                         <TextView
                             android:id="@+id/pagesTv"
                             style="@style/TextAppearance.MaterialComponents.Caption"
@@ -253,7 +253,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:drawableTop="@drawable/ic_book_white"
-            android:text="Read"
+            android:text="@string/read_btn"
             android:textColor="@color/white"
             android:background="@color/purple_200"/>
 
@@ -264,7 +264,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:drawableTop="@drawable/ic_download_white"
-            android:text="Download"
+            android:text="@string/download_btn"
             android:textColor="@color/white"
             android:background="@color/purple_200"/>
 
@@ -274,7 +274,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:drawableTop="@drawable/ic_favorite_border_white"
-            android:text="Add Favorite"
+            android:text="@string/fav_btn"
             android:background="@color/purple_200"
             android:textColor="@color/white"/>
 
