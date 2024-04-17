@@ -38,4 +38,10 @@
     <string name="book_details_views">Views</string>
     <string name="book_details_download">Downloads</string>
     <string name="book_details_pages">Pages</string>
+    <string name="profile">Profile</string>
+    <string name="account">Account</string>
+    <string name="create_at">Create At</string>
+    <string name="fav_count">Favorite</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="favorite_label">Favorite Books</string>
 </resources>

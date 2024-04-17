@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back01"
+    tools:context=".ProfileEditActivity">
+
+    <RelativeLayout
+        android:id="@+id/toolbarRl"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@drawable/shape_toolbar01">
+
+        <ImageButton
+            android:id="@+id/backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@android:color/transparent"
+            android:padding="5dp"
+            android:src="@drawable/ic_back_white" />
+
+        <TextView
+            android:id="@+id/profileTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="@string/edit_profile"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/profileImg"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_below="@id/profileTv"
+            android:layout_centerHorizontal="true"
+            android:scaleType="centerCrop"
+            android:layout_marginTop="40dp"
+            android:background="@color/white"
+            android:src="@drawable/ic_person_gray" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="225dp"
+        android:layout_marginEnd="20dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/nameTil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:hintEnabled="false">
+
+            <EditText
+                android:id="@+id/nameEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_edittext01"
+                android:drawableStart="@drawable/ic_person_gray"
+                android:drawablePadding="10dp"
+                android:hint="@string/username_placeholder"
+                android:inputType="textPersonName|textCapWords"
+                android:padding="10dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/gray01"
+                android:textSize="18sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/updateBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/nameTil"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/shape_button01"
+            android:text="@string/update_btn"
+            android:textColor="@color/white" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

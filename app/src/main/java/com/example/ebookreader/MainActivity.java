@@ -22,8 +22,6 @@ import java.util.Locale;
 public class MainActivity extends AppCompatActivity {
 
     private ActivityMainBinding binding;
-//    Spinner spinner;
-//    public static final String[] languages = {"English", "Vietnamese", "French"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

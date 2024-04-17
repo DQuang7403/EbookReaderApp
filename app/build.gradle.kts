@@ -52,6 +52,8 @@ dependencies {
     implementation("com.google.firebase:firebase-database:20.3.1")
     implementation("com.google.firebase:firebase-storage:20.3.0")
 
+    implementation("com.github.bumptech.glide:glide:4.16.0")
+
     //pdf view library
     implementation("com.github.barteksc:android-pdf-viewer:2.8.2")
     testImplementation("junit:junit:4.13.2")

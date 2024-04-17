@@ -4,12 +4,14 @@ public class ModelPdf {
     //variables
     String uid, id, title, description, categoryID, url;
     long timestamp, viewCount, downloadsCount;
+    boolean favorite;
+
     //constructor
     public ModelPdf() {
     }
     //constructor with all params
 
-    public ModelPdf(String uid, String id, String title, String description, String categoryID, String url, long timestamp, long viewCount, long downloadsCount) {
+    public ModelPdf(String uid, String id, String title, String description, String categoryID, String url, long timestamp, long viewCount, long downloadsCount, boolean favorite) {
         this.uid = uid;
         this.id = id;
         this.title = title;
@@ -19,6 +21,7 @@ public class ModelPdf {
         this.timestamp = timestamp;
         this.viewCount = viewCount;
         this.downloadsCount = downloadsCount;
+        this.favorite = favorite;
     }
 
 
@@ -97,5 +100,13 @@ public class ModelPdf {
 
     public void setDownloadsCount(long downloadsCount) {
         this.downloadsCount = downloadsCount;
+    }
+
+    public boolean isFavorite() {
+        return favorite;
+    }
+
+    public void setFavorite(boolean favorite) {
+        this.favorite = favorite;
     }
 }

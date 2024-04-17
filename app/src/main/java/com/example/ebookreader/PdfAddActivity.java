@@ -176,7 +176,7 @@ public class PdfAddActivity extends AppCompatActivity {
         hashMap.put("categoryID",""+selectedcategoryId);
         hashMap.put("url",""+uploadedPdfUrl);
         hashMap.put("timestamp", timestamp);
-        hashMap.put("viewCount", 0);
+        hashMap.put("viewsCount", 0);
         hashMap.put("downloadCount", 0);
 
         //db refrence: DB > Books

@@ -61,10 +61,6 @@ public class MyApplication extends Application {
         String TAG = "DELETE_BOOK_TAG";
 
         Log.d(TAG, "deleteBook: Deleting...");
-        ProgressDialog progressDialog = new ProgressDialog(context);
-        progressDialog.setTitle("Please wait");
-        progressDialog.setMessage("Deleting "+boolTitle+"..."); //e.g. Deleting Book ABC
-        progressDialog.show();
 
         Log.d(TAG,"deleteBook: Deleting from storage...");
         StorageReference storageReference = FirebaseStorage.getInstance().getReferenceFromUrl(bookUrl);
@@ -82,7 +78,7 @@ public class MyApplication extends Application {
                                     @Override
                                     public void onSuccess(Void unused) {
                                         Log.d(TAG,"onSuccess: Deleted from db too");
-                                        progressDialog.dismiss();
+
                                         Toast.makeText(context, "Book Deleted Successfully...", Toast.LENGTH_SHORT).show();
 
                                     }
@@ -91,7 +87,7 @@ public class MyApplication extends Application {
                                     @Override
                                     public void onFailure (@NonNull Exception e){
                                         Log.d(TAG,"onFailure: Failed to delete from db due to "+e.getMessage());
-                                        progressDialog.dismiss();
+
                                         Toast.makeText(context, ""+e.getMessage(), Toast.LENGTH_SHORT).show();
 
                                     }
@@ -102,7 +98,7 @@ public class MyApplication extends Application {
                     @Override
                     public void onFailure (@NonNull Exception e) {
                         Log.d(TAG,"onFailure: Failed to delete from storage due to "+e.getMessage());
-                        progressDialog.dismiss();
+
                         Toast.makeText(context, ""+e.getMessage(), Toast.LENGTH_SHORT).show();
                     }
                 });
@@ -239,10 +235,6 @@ public class MyApplication extends Application {
         String nameWithExtension = bookTitle + ".pdf";
         Log.d(TAG_DOWNLOAD, "downloadBook: NAME: "+nameWithExtension);
 
-        //progress dialog
-//        ProgressDialog progressDialog = new ProgressDialog(context);
-//        progressDialog.setMessage("Downloading "+ nameWithExtension +"..."); //e.g. Downloading ABC_Book.pdf
-//        progressDialog.show();
 
         //download from firebase storage using url
         StorageReference storageReference = FirebaseStorage.getInstance().getReferenceFromUrl(bookUrl);

@@ -39,4 +39,9 @@
     <string name="book_details_views">Lượt xem</string>
     <string name="book_details_download">Lượt tải về</string>
     <string name="book_details_pages">Số trang</string>
+    <string name="profile">Hồ sơ</string>
+    <string name="account">Tài khoản</string>
+    <string name="create_at">Ngày tạo</string>
+    <string name="fav_count">Yêu thích</string>
+    <string name="edit_profile">Chỉnh sửa hồ sơ</string>
 </resources>

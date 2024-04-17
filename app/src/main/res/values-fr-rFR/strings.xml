@@ -38,5 +38,10 @@
     <string name="book_details_views">Vues</string>
     <string name="book_details_download">Téléchargements</string>
     <string name="book_details_pages">Pages</string>
+    <string name="profile">Profil</string>
+    <string name="account">Compte</string>
+    <string name="create_at">Créer à</string>
+    <string name="fav_count">Préféré</string>
+    <string name="edit_profile">Editer le profil</string>
 
 </resources>

@@ -142,7 +142,7 @@ public class PdfEditActivity extends AppCompatActivity {
         HashMap<String, Object> hashMap = new HashMap<>();
         hashMap.put("title", ""+title);
         hashMap.put("description", ""+description);
-        hashMap.put("categoryId", ""+selectedCategoryId);
+        hashMap.put("categoryID", ""+selectedCategoryId);
 
         //start updating
         DatabaseReference ref =  FirebaseDatabase.getInstance().getReference ("Books");

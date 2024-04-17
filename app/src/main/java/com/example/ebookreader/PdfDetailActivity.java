@@ -9,15 +9,21 @@ import androidx.core.content.ContextCompat;
 import androidx.core.content.PackageManagerCompat;
 
 import android.Manifest;
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
+import android.provider.Settings;
 import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
+import com.example.ebookreader.adapters.AdapterPdfFav;
 import com.example.ebookreader.databinding.ActivityPdfDetailBinding;
+import com.example.ebookreader.models.ModelPdf;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -40,7 +46,6 @@ public class PdfDetailActivity extends AppCompatActivity {
     private FirebaseAuth firebaseAuth;
 
     public static final String TAG_DOWNLOAD = "DOWNLOAD_TAG";
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -122,9 +127,6 @@ public class PdfDetailActivity extends AppCompatActivity {
             if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                 Log.d(TAG_DOWNLOAD, "Permission Granted");
                 MyApplication.downloadBook(this, "" + bookId, "" + bookTitle, "" + bookUrl);
-            } else {
-                Log.d(TAG_DOWNLOAD, "Permission Denied");
-                Toast.makeText(this, "Permission Denied", Toast.LENGTH_SHORT).show();
             }
         }
     }
