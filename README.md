@@ -15,18 +15,18 @@ EbookReader is a user-friendly Android application designed to help users read a
 
 ## Preview
 
-Here are some screenshots showcasing the UI of TechTopia:
+Here are some screenshots showcasing the UI:
 1. **User UI**:
-   ![User UI](Screenshots/User_dashboard.png)
+   <img src="Screenshots/User_dashboard.png" alt="User UI" width="400">
 
 2. **Read Book Page**:
-   ![Read Book Page](Screenshots/Read_book.png)
+   <img src="Screenshots/Read_book.png" alt="Read Book Page" width="400">
 
 3. **Book Details**:
-   ![Book Details](Screenshots/Book_details.png)
+   <img src="Screenshots/Book_details.png" alt="Book Details" width="400">
 
 4. **Admin Dashboard**:
-   ![Admin Dashboard](Screenshots/Admin_dashboard.png)
+   <img src="Screenshots/Admin_dashboard.png" alt="Admin Dashboard" width="400">
 
 - See more in the screenshots folder
 ## Installation
