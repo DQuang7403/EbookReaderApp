@@ -1,4 +1,4 @@
-package com.example.ebookreader;
+package com.example.ebookreader.activities;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,7 +11,6 @@ import android.util.Log;
 import android.view.View;
 
 import com.example.ebookreader.adapters.AdapterPdfAdmin;
-import com.example.ebookreader.databinding.ActivityPdfAddBinding;
 import com.example.ebookreader.databinding.ActivityPdfListAdminBinding;
 import com.example.ebookreader.models.ModelPdf;
 import com.google.firebase.database.DataSnapshot;
@@ -19,8 +18,6 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-
-import org.checkerframework.checker.units.qual.C;
 
 import java.util.ArrayList;
 

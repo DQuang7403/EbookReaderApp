@@ -1,4 +1,4 @@
-package com.example.ebookreader;
+package com.example.ebookreader.activities;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,6 +9,7 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
 
+import com.example.ebookreader.MainActivity;
 import com.example.ebookreader.adapters.AdapterCategory;
 import com.example.ebookreader.databinding.ActivityDashboardAdminBinding;
 import com.example.ebookreader.models.ModelCategory;

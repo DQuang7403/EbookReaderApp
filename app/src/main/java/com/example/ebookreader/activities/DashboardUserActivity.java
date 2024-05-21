@@ -1,7 +1,5 @@
-package com.example.ebookreader;
+package com.example.ebookreader.activities;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
@@ -13,6 +11,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.example.ebookreader.BooksUserFragment;
+import com.example.ebookreader.MainActivity;
 import com.example.ebookreader.databinding.ActivityDashboardUserBinding;
 import com.example.ebookreader.models.ModelCategory;
 import com.google.firebase.auth.FirebaseAuth;
@@ -149,6 +149,7 @@ public class DashboardUserActivity extends AppCompatActivity {
     private void checkUser() {
         FirebaseUser firebaseUser = firebaseAuth.getCurrentUser();
         if (firebaseUser == null){
+            binding.profileBtn.setVisibility(View.GONE);
             binding.subTitleTv.setText("anonymous user");
 
         }else {

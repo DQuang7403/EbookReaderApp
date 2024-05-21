@@ -1,4 +1,4 @@
-package com.example.ebookreader;
+package com.example.ebookreader.activities;
 
 import static android.app.ProgressDialog.show;
 
@@ -7,7 +7,6 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;

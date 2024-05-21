@@ -14,7 +14,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.ebookreader.MyApplication;
-import com.example.ebookreader.PdfDetailActivity;
+import com.example.ebookreader.activities.PdfDetailActivity;
 import com.example.ebookreader.databinding.RowBooksFavoriteBinding;
 import com.example.ebookreader.models.ModelPdf;
 import com.github.barteksc.pdfviewer.PDFView;

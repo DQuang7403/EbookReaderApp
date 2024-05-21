@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PdfViewActivity">
+    tools:context=".activities.PdfViewActivity">
 
     <!--Toolbar-->
     <RelativeLayout
@@ -20,7 +20,7 @@
             android:layout_centerVertical="true"
             android:layout_marginStart="10dp"
             android:background="@android:color/transparent"
-            android:src="@drawable/ic_back_white"/>
+            android:src="@drawable/ic_back_white" />
 
         <!--TextView: Title-->
         <TextView
@@ -31,7 +31,7 @@
             android:layout_marginTop="8dp"
             android:text="@string/read_book"
             android:textColor="@color/white"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
 
         <!--TextView: Subtitle e.g. page number-->
         <TextView
@@ -42,8 +42,31 @@
             android:layout_centerHorizontal="true"
             android:text="N/N"
             android:textColor="@color/white"
-            android:textSize="12sp"/>
+            android:textSize="12sp" />
 
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="15dp"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/bookMarkRemove"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_bookmark_remove" />
+
+            <ImageButton
+                android:id="@+id/bookMark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_bookmark_border_white" />
+        </LinearLayout>
     </RelativeLayout>
 
     <!--PdfView: Load Pdf-->
@@ -51,13 +74,13 @@
         android:id="@+id/pdfView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/toolbarRl"/>
+        android:layout_below="@id/toolbarRl" />
 
     <!--ProgresssBar: Show while pdf/book is loading from firebase-->
     <ProgressBar
         android:id="@+id/progressBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"/>
+        android:layout_centerInParent="true" />
 
 </RelativeLayout>

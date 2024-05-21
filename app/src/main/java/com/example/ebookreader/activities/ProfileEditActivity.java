@@ -1,4 +1,4 @@
-package com.example.ebookreader;
+package com.example.ebookreader.activities;
 
 import androidx.activity.result.ActivityResult;
 import androidx.activity.result.ActivityResultCallback;
@@ -22,6 +22,8 @@ import android.widget.PopupMenu;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.example.ebookreader.MyApplication;
+import com.example.ebookreader.R;
 import com.example.ebookreader.databinding.ActivityProfileEditBinding;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;

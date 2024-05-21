@@ -1,4 +1,4 @@
-package com.example.ebookreader;
+package com.example.ebookreader.activities;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;

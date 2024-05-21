@@ -1,4 +1,4 @@
-package com.example.ebookreader;
+package com.example.ebookreader.activities;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,6 +9,8 @@ import android.util.Log;
 import android.view.View;
 
 import com.bumptech.glide.Glide;
+import com.example.ebookreader.MyApplication;
+import com.example.ebookreader.R;
 import com.example.ebookreader.adapters.AdapterPdfFav;
 import com.example.ebookreader.databinding.ActivityProfileBinding;
 import com.example.ebookreader.models.ModelPdf;
