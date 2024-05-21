@@ -16,17 +16,17 @@ EbookReader is a user-friendly Android application designed to help users read a
 ## Preview
 
 Here are some screenshots showcasing the UI:
-1. **User UI**:
-   <img src="Screenshots/User_dashboard.png" alt="User UI" width="400">
+## User UI
+<img src="Screenshots/User_dashboard.png" alt="User UI" width="400">
 
-2. **Read Book Page**:
-   <img src="Screenshots/Read_book.png" alt="Read Book Page" width="400">
+## Read Book Page
+<img src="Screenshots/Read_book.png" alt="Read Book Page" width="400">
 
-3. **Book Details**:
-   <img src="Screenshots/Book_details.png" alt="Book Details" width="400">
+## Book Details
+<img src="Screenshots/Book_details.png" alt="Book Details" width="400">
 
-4. **Admin Dashboard**:
-   <img src="Screenshots/Admin_dashboard.png" alt="Admin Dashboard" width="400">
+## Admin Dashboard
+<img src="Screenshots/Admin_dashboard.png" alt="Admin Dashboard" width="400">
 
 - See more in the screenshots folder
 ## Installation
